@@ -1,2 +1,2 @@
-#Strata Design Studio  
-Firm's website built using ReactJs
+## Strata Design Studio  
+The firm's website was built using ReactJs
