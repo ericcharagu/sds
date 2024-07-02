@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Cover from "./components/cover";
+import React from "react";
+import NavBar from "./components/nav";
+import { ParallaxProvider } from "react-scroll-parallax";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <ParallaxProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Cover />}></Route>
+
+            {/* <Route path="/about" element={<About />}></Route>
+          <Route path="/archmodels" element={<Models />}></Route>
+          <Route path="/projects" element={<Projects />}></Route>
+          <Route path="/all-projects" element={<AllProjects />}></Route>
+          <Route path="/building" element={<Building />}></Route> */}
+          </Routes>
+        </ParallaxProvider>
+      </div>
+
+      {/* <Footer /> */}
+    </Router>
   );
 }
 

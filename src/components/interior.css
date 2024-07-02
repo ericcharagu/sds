@@ -1,0 +1,19 @@
+#intDiv {
+    padding: "20px"
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.image-item {
+    cursor: pointer;
+}
+
+.image-item img {
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
